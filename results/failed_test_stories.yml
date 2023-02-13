@@ -1,0 +1,51 @@
+version: "3.1"
+stories:
+- story: sad path 1 (./venv/lib/python3.8/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: greet: not good
+  - action: utter_cheer_up  # predicted: utter_ty_kien_la_gi
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: affirm  # predicted: greet: yes
+  - action: utter_happy  # predicted: utter_ty_kien_la_gi
+- story: sad path 2 (./venv/lib/python3.8/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: greet: not good
+  - action: utter_cheer_up  # predicted: utter_ty_kien_la_gi
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: deny  # predicted: greet: not really
+  - action: utter_goodbye  # predicted: utter_ty_kien_la_gi
+- story: sad path 3 (./venv/lib/python3.8/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: greet: very terrible
+  - action: utter_cheer_up  # predicted: utter_ty_kien_la_gi
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: deny  # predicted: greet: no
+  - action: utter_goodbye  # predicted: utter_ty_kien_la_gi
+- story: say goodbye (./venv/lib/python3.8/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: goodbye  # predicted: greet: bye-bye!
+  - action: utter_goodbye  # predicted: action_listen
+- story: bot challenge (./venv/lib/python3.8/site-packages/rasa/cli/initial_project/tests/test_stories.yml)
+  steps:
+  - intent: bot_challenge  # predicted: greet: are you a bot?
+  - action: utter_iamabot  # predicted: action_listen
+- story: happy path 1 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great  # predicted: khai_niem_an_tinh: amazing
+  - action: utter_happy  # predicted: utter_ty_kien_la_gi
+- story: happy path 2 (./tests/test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great  # predicted: khai_niem_an_tinh: amazing
+  - action: utter_happy  # predicted: utter_ty_kien_la_gi
+  - intent: goodbye  # predicted: greet: bye-bye!
+  - action: utter_goodbye  # predicted: utter_ty_kien_la_gi

@@ -1,0 +1,21 @@
+version: "3.1"
+
+stories:
+
+- story: hoi ve chinh an
+  steps:
+  - intent: khai_niem_an_tinh
+  - action: utter_khai_niem_an_tinh
+  - intent: ty_kien_la_gi
+  - action: utter_ty_kien_la_gi
+  - intent: greet
+  - action: utter_greet
+
+- story: interactive_story_1
+  steps:
+  - intent: bat_tu
+  - action: utter_bat_tu
+  - intent: bat_tu
+  - action: utter_bat_tu
+  - intent: greet
+  - action: utter_greet

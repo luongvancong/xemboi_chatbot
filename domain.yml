@@ -1,0 +1,26 @@
+version: '3.1'
+intents:
+- bat_tu
+- greet
+- khai_niem_an_tinh
+- ty_kien_la_gi
+responses:
+  utter_greet:
+  - text: Chào bạn, tôi có thể giúp gì cho bạn?
+  utter_bat_tu:
+  - text: |-
+      Bát Tự (hay còn được biết với tên gọi khác là Tứ Trụ) là một trong các bộ môn luận giải của Văn Hóa Phương Đông suy đoán về tính cách, vận số của con người.
+       Tứ trụ cơ bản là 4 trụ (hay 4 yếu tố), bao gồm: Giờ; Ngày; Tháng; Năm. Mỗi trụ được xem xét theo 2 chiều là Thiên can và Địa chi.
+       Như vậy, tổng 4 trụ sẽ có 4 Thiên can và 4 Địa chi, do đó, Tứ Tự còn được mọi người biết đến với tên gọi là Bát Tự (8 yếu tố).
+  utter_khai_niem_an_tinh:
+  - text: Ấn tinh bao gồm Chính Ấn và Thiên Ấn.
+  utter_ty_kien_la_gi:
+  - text: Tỷ kiên là lực lượng sinh trợ cùng tính chất với nhật can.
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_bat_tu
+- utter_greet
+- utter_ty_kien_la_gi
+- utter_khai_niem_an_tinh

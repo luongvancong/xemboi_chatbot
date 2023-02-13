@@ -1,0 +1,27 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - chào
+    - chào bot
+    - a chào
+- intent: bat_tu
+  examples: |
+    - bát tự là gì
+    - tứ trụ là gì
+    - bát tự
+- intent: khai_niem_an_tinh
+  examples: |
+    - ấn tinh là gì
+    - ấn là gì
+    - ấn để làm gì
+    - tác dụng của ấn tinh
+    - tác dụng của ấn
+- intent: ty_kien_la_gi
+  examples: |
+    - tỷ kiên là gì
+    - tỷ kiên để làm gì
+    - tác dụng của tỷ kiên
+    - cách sử dụng tỷ kiên
